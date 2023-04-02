@@ -1,9 +1,13 @@
+import Info from "./components/Info"
+import { Search } from "./components/Search"
+import User from "./components/User"
+
 const App = () => {
   return (
     <div>
-
-
-      <h1 className="bg-slate-500 text-center text-white">hello react how are you</h1>
+      <User/>
+      <Search/>
+    <Info/>
     </div>
   )
 }
