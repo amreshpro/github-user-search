@@ -1,24 +1,30 @@
-import Follower from "./components/Follower"
-import Info from "./components/Info"
-import { Search } from "./components/Search"
-import User from "./components/User"
+
+import { Search } from "./components/Search";
+
+import Info from "./components/Info";
+import User from "./components/User";
+import Follower from "./components/Follower";
+
 
 const App = () => {
   return (
-    <div className="w-screen h-screen bg-pink-200">
+  <>
+  <div className="container bg-pink-200 pb-5 pt-5 ">
 
-  <div className="container flex flex-col items-center ">
+<div className="top  m-4 flex flex-col gap-4 justify-center items-center">
   <Search/>
   <Info/>
+</div>
+<div className="bottom  flex flex-wrap gap-2 justify-evenly items-center ">
+  <User/>
+  <Follower/>
+</div>
+
 
   </div>
-  <div className="container2 flex items-center justify-center  gap-4 m-2 ">
-<User/>
-<Follower/>
-
-  </div>
-
-    </div>
-  )
-}
-export default App
+  
+  
+  </>
+  );
+};
+export default App;

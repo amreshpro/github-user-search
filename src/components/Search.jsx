@@ -1,12 +1,21 @@
-import React from "react";
+import React,{useState,useContext} from "react";
 import {AiOutlineSearch} from 'react-icons/ai'
+
+
+
+//import {ourContainerFunction, ourContextData} from '../context/context'
+
+
 export const Search = () => {
-  const [searchData, setSearchData] = React.useState("");
+  const [searchData, setSearchData] = useState("");
+
+// const { ourContainerFunction,searchUser} = useContext(ourContextData);
 
   const onSearchHandler = () => {
     console.log(searchData);
     console.log(searchData.length);
-
+ //searchGithubUsers(searchData)
+ //console.log(searchUser)
     // setSearchData('')
   };
   return (

@@ -1,12 +1,12 @@
 
 
-const FollowerCard = ({avatar_url,login,html_url}) => {
+const FollowerCard = ({avatar_url,login,html_url,id}) => {
   return (
 
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-2 items-center" key={id}>
 
 <div className="img m-1">
-  <img src={avatar_url} className="w-24 h-24 rounded-full" alt="" />
+  <img src={avatar_url} className="w-12 h-12  rounded-full" alt="" />
 </div>
 <div className="text">
   <h1 className="text-lg">{login}</h1>
