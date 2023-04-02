@@ -10,8 +10,8 @@ export const Search = () => {
     // setSearchData('')
   };
   return (
-    <div className="  flex flex-row justify-start flex-wrap bg-slate-100 w-fit">
-        <AiOutlineSearch className="text-gray-500 text-3xl p-1 m-1 mt-2 "/>
+    <div className=" shadow-lg mt-5 mb-5 flex flex-row justify-center items-center flex-wrap bg-slate-100 w-fit ">
+        <AiOutlineSearch className="text-gray-500 text-3xl px-1 "/>
       <input
         type="text"
         name="search"
@@ -26,7 +26,7 @@ export const Search = () => {
       <button
         type="submimt"
         onClick={onSearchHandler}
-        className="bg-blue-500 text-white text-center p-1  px-4  
+        className="bg-blue-400 text-white text-center p-1  px-4 
         "
       >
         Search

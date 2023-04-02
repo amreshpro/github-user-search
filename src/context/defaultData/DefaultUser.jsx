@@ -24,7 +24,7 @@ export default {
     "email": null,
     "hireable": null,
     "bio": "Web Developer | JavaScript | NodeJS |  React JS | TailwindCSS | SASS  | C++ | C | Java | 2🌟@Codechef | 2🌟@Hackerrank |\r\n\r\n",
-    "twitter_username": "ursamresh",
+    "twitter_username": 'ursamresh',
     "public_repos": 21,
     "public_gists": 0,
     "followers": 1,
