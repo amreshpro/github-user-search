@@ -16,11 +16,17 @@ const { searchGithubUser  } = myTest
 // console.log(follower)
   const [searchData, setSearchData] = useState("");
 
-
+const onKeyUpHandler=(e)=>{
+    if(e.key==='Enter'|| e.which ===14 ){
+   searchGithubUser(searchData)
+   setSearchData("")
+    }
+}
 
   const onSearchHandler = () => {
     //console.log(searchData)
  searchGithubUser(searchData)
+    setSearchData("")
   };
   return (
     <div className=" shadow-lg mt-5 mb-5 flex flex-row justify-center items-center flex-wrap bg-slate-100 w-fit ">
@@ -34,6 +40,9 @@ const { searchGithubUser  } = myTest
         onChange={(e) => {
           setSearchData(e.target.value);
         }}
+        
+        onKeyUp={onKeyUpHandler}
+        
         className="bg-slate-100 outline-none border-none placeholder-gray-500"
       />
       <button
