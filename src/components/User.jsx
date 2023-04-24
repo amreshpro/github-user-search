@@ -32,7 +32,7 @@ const {login,avatar_url,html_url ,location,blog,bio,name,twitter_username,compan
 
 
   return (
-    <div className=' flex flex-col w-80 h-full flex-wrap shadow-lg'>
+    <div className=' flex flex-col w-64 h-full flex-wrap shadow-lg'>
 
 <h1 className='text-gray-500 w-fit p-1 px-2 bg-slate-100'>User</h1>
     
