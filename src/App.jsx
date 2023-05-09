@@ -1,30 +1,16 @@
-
-import { Search } from "./components/Search";
-
-import Info from "./components/Info";
-import User from "./components/User";
-import Follower from "./components/Follower";
-
+import {SearchBox,UserCard} from "./components"
+import FollowerContainer from "./components/FollowerContainer"
+import Title from "./components/mini/Title"
 
 const App = () => {
   return (
-  <>
-  <div className="container bg-pink-200 pb-5 pt-5 ">
+<div className="  bg-gradient-to-b from-primary-100   flex flex-col gap-12 justify-center items-center ">
+<Title/>
+<SearchBox/>
+<UserCard/>
+<FollowerContainer/>
 
-<div className="top  m-4 flex flex-col gap-4 justify-center items-center">
-  <Search/>
-  <Info/>
 </div>
-<div className="bottom  flex flex-wrap gap-2 justify-evenly items-center ">
-  <User/>
-  <Follower/>
-</div>
-
-
-  </div>
-  
-  
-  </>
-  );
-};
-export default App;
+  )
+}
+export default App
