@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import SearchContext from "./context/SearchContext"
 import follower from "./defaults/follower"
 import user from "./defaults/user"
-import { useAuth0 } from '@auth0/auth0-react'
+
 
 const baseUrl = 'https://api.github.com/users'
 
@@ -12,7 +12,7 @@ const [gitUser, setGitUser] = useState(user)
 const [gitFollower, setGitFollower] = useState(follower)
 //const [isLoading, setIsLading] = useState(false)
 
-const {isAuthenticated,isLoading}  = useAuth0();
+
 
 
 const SearchGithubUser = async (userName)=>{
@@ -25,6 +25,7 @@ const gitUserFetchedData = await  fetch(`${baseUrl}/${userName}`,
   headers: {
     
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin":"https://dev-403ejmfvkjgkf1ic.us.auth0.com",
   },
   body: JSON.stringify(data),
 }

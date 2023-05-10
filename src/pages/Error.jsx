@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 
 
 const Error = () => {
@@ -7,6 +7,7 @@ const Error = () => {
 
 <h1>Error Page Not Found</h1>
 <Link to="/login">Go Back to Home</Link>
+<Navigate to="/login">Navigate Home</Navigate>
     </div>
   )
 }
