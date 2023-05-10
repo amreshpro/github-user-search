@@ -1,9 +1,9 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import LogoutButton from "./LogoutButton";
+
 
 const Profile = () => {
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { user, isAuthenticated, isLoading,logout } = useAuth0();
 const isUserExist = isAuthenticated && user
   if (isLoading) {
     return <div>Loading ...</div>;
@@ -19,6 +19,11 @@ if(isUserExist){
     </div>
 <div className="font-poppins">
   <h1 className="font-poppins text-primary-600">{user?.email}</h1>
+</div>
+<div className="logout-btn">
+<button className="px-2 py-1 bg-primary-800 text-primary-200 rounded-lg" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      Log Out
+    </button>
 </div>
 
         </div>

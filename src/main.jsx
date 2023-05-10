@@ -23,7 +23,13 @@ domain="dev-403ejmfvkjgkf1ic.us.auth0.com"
 clientId="xhUTg8fv09CRsEq8JzUG9JDesDZNKcwi"
 authorizationParams={{
   redirect_uri: window.location.origin
-}}>
+}}
+
+
+useRefreshTokens={true}
+cacheLocation="localstorage"
+
+>
 <SearchLogic>
 <App />
 </SearchLogic>
