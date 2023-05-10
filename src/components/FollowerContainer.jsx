@@ -9,11 +9,15 @@ import SearchContext from '../controller/context/SearchContext';
 
 const FollowerContainer = () => {
 
-  const  {gitFollower} = useContext(SearchContext)
+  const  contextObject = useContext(SearchContext)
+ const isFound = contextObject.isFound
+ const gitFollower = contextObject.gitFollower
 
+if(isFound){
 
 
   return (
+ 
 <div className="w-max m-2 flex flex-col justify-center">
     <h1 className="text-primary-950 bg-primary-100 w-max px-3 py-1 xsm:pl-8">Follower</h1>
     <div className=" overflow-scroll  bg-primary-100 h-96  justify-center items-start">
@@ -22,7 +26,7 @@ const FollowerContainer = () => {
 {
 
 
-gitFollower.map((item)=>{
+gitFollower?.map((item)=>{
 
 return( <FollowerCard {...item} key={item.id}  />)
 
@@ -37,5 +41,6 @@ return( <FollowerCard {...item} key={item.id}  />)
 </div>
 
   );
+}
 };
 export default FollowerContainer;

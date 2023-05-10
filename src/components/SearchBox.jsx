@@ -1,33 +1,27 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import { BiSearch } from "react-icons/bi";
 
-import SearchContext from '../controller/context/SearchContext'
-
-
+import SearchContext from "../controller/context/SearchContext";
 
 const SearchBox = () => {
-
-
   const [inputText, setInputText] = useState("");
 
-  const {SearchGithubUser} = useContext(SearchContext)
-//const {SearchGithubUser}  = ResultObject
+  const { SearchGithubUser } = useContext(SearchContext);
+  //const {SearchGithubUser}  = ResultObject
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(inputText);
-    SearchGithubUser(inputText)
+    SearchGithubUser(inputText);
     emptyTheInputBox();
   };
 
-
-  const onKeyUpHandler=(e)=>{
-    if(e.key==='Enter'|| e.which ===14 ){
-      SearchGithubUser(inputText)
-    emptyTheInputBox();
+  const onKeyUpHandler = (e) => {
+    if (e.key === "Enter" || e.which === 14) {
+      SearchGithubUser(inputText);
+      emptyTheInputBox();
     }
-}
-
+  };
 
   const emptyTheInputBox = () => {
     setInputText("");
