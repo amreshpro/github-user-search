@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 
 domain="dev-403ejmfvkjgkf1ic.us.auth0.com"
-clientId="xhUTg8fv09CRsEq8JzUG9JDesDZNKcwi"
+clientId="gqmEr9i6vERXG0a2lJiPChNmApxCjUq9"
 authorizationParams={{
   redirect_uri: window.location.origin
 }}

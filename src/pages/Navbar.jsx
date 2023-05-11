@@ -14,8 +14,8 @@ if(isUserExist){
       <>
       <div className="flex justify-center items-center gap-2 bg-primary-200 py-1  px-2  ">
      
-    <div className="img">
-      <img src={user?.picture} alt={user?.name} className="rounded-full w-14 " />
+    <div className="img w-max">
+      <img src={user?.picture} alt={user?.name} className="rounded-full w-16 xsm:w-10" />
     </div>
 <div className="font-poppins">
   <h1 className="font-poppins text-primary-600">{user?.email}</h1>
