@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import SearchContext from "./context/SearchContext";
 import follower from "./defaults/follower";
 import user from "./defaults/user";
-import { useAuth0 } from "@auth0/auth0-react";
+
 
 
 

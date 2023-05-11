@@ -12,7 +12,7 @@ if(isUserExist){
     return (
       <>
          <h1 className="titile text-center m-2 p-1 font-bold text-xl text-primary-800"> Welcome {user?.name}</h1>
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2 bg-primary-200 p-1">
      
     <div className="img">
       <img src={user?.picture} alt={user?.name} className="rounded-full w-14 " />
