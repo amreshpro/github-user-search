@@ -45,7 +45,7 @@ const SearchBox = () => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="bg-primary-500 h-full text-primary-900  py-2 px-2 xsm:rounded-full "
+          className="bg-primary-500 h-full text-primary-900  py-2 px-2 sm:rounded-full "
         >
           {<BiSearch className="animate-bounce" />}{" "}
         </button>

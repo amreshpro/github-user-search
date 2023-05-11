@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 import SearchContext from "./context/SearchContext";
 import follower from "./defaults/follower";
 import user from "./defaults/user";
+import following from "./defaults/following";
 
 
 
@@ -12,6 +13,8 @@ const SearchLogic = ({ children }) => {
 
   const [gitUser, setGitUser] = useState(user);
   const [gitFollower, setGitFollower] = useState(follower);
+  const [gitFollowing, setGitFollowing] = useState(following);
+
   const [isLoading, setIsLoading] = useState(false)
   const [isFound, setIsFound] = useState(true)
 
@@ -54,12 +57,30 @@ const SearchLogic = ({ children }) => {
         console.log(err);
       });
 
-      // if(gitFollowerFetchedData.message ==='Not Found'){ 
-      //   setIsFound(false)
-      //   setIsLoading(false)
-      // }
+      
     setGitFollower(gitFollowerFetchedData);
 
+
+
+    // fetched following
+    const gitFollowingFetchedData = await fetch(
+      `${baseUrl}/${userName}/following`
+    )
+      .then((res) => {
+        if(res.status == 404){
+          setIsFound(false)
+          return null
+        }
+        setIsFound(true)
+        return res.json();
+      })
+      .catch((err) => {
+        setIsFound(false)
+        console.log(err);
+      });
+
+      
+    setGitFollowing(gitFollowingFetchedData);
     setIsLoading(false)
   };
 
@@ -72,7 +93,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <SearchContext.Provider value={{ SearchGithubUser, gitUser, gitFollower, isLoading,isFound }}>
+    <SearchContext.Provider value={{ SearchGithubUser, gitUser, gitFollower,gitFollowing, isLoading,isFound }}>
       {children}
     </SearchContext.Provider>
   );

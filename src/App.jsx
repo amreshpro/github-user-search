@@ -16,7 +16,7 @@ const App = () => {
       
     <div className="  bg-gradient-to-b from-primary-100   flex flex-col gap-12 justify-center items-center ">
       <BrowserRouter>
-        <Title />
+
      
         <Routes>
           <Route

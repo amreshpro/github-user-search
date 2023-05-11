@@ -7,6 +7,7 @@ import Navbar from "../pages/Navbar";
 
 import LoadingSpin from "./mini/LoadingSpin";
 import InfoContainer from "./InfoContainer";
+import FollowingContainer from "./FollowingContainer";
 
 const Dashboard = () => {
   const {isAuthenticated,isLoading} = useAuth0()
@@ -16,15 +17,22 @@ if(isLoading){
 }
 if(isAuthenticated)
   return (
-    <div>
-     <div className="top"></div>
+    <div className="flex flex-col gap-5 mb-8">
+     <div className="top">
      <Navbar />
       <SearchBox />
-    <div className="data">
+      </div>
+
+    <div className="data flex flex-col justify-center items-center">
       <UserCard />
-    <InfoContainer/>
-      <FollowerContainer />
-    </div>
+    <InfoContainer/> 
+      </div>
+
+  <div className="follow-container flex flex-wrap justify-center gap-3">
+  <FollowerContainer />
+      <FollowingContainer/>
+  </div>
+ 
     </div>
   );
 };

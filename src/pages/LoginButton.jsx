@@ -1,12 +1,14 @@
 import React from "react";
 import {FcGoogle} from 'react-icons/fc'
 import { useAuth0 } from "@auth0/auth0-react";
+import Title from "../components/mini/Title";
 
 const LoginButton = () => {
   const { loginWithRedirect ,isLoading,isAuthenticated} = useAuth0();
 
 
   return <div className="flex flex-col m-1 justify-center items-center">
+    <Title/>
 <div className="git p-1 px-2">
 <img src="/github.png" alt="git-logo" className="rounded-full object-fill w-56"/>
 </div>
