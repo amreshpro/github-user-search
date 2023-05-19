@@ -1,5 +1,6 @@
 import { AiOutlineLink } from "react-icons/ai";
 import { ImLocation2 } from "react-icons/im";
+import {BsTwitter}  from 'react-icons/bs'
 import { useContext } from "react";
 // default data
 
@@ -63,8 +64,8 @@ else {
               </a>
             </div>
             <span>
-              <a href="" className="font-poppins text-primary-950 font-bold">
-                {twitter_username}
+              <a href="" className="flex gap-1 font-poppins text-primary-950 font-bold">
+          <BsTwitter className="mt-0.5 text-primary-950 text-xl"/>  {twitter_username}
               </a>
             </span>
             <div className="">

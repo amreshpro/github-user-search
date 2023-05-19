@@ -6,6 +6,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import Navbar from "../pages/Navbar";
 
 import LoadingSpin from "./mini/LoadingSpin";
+import Title from "./mini/Title";
+
 import InfoContainer from "./InfoContainer";
 import FollowingContainer from "./FollowingContainer";
 
@@ -18,7 +20,8 @@ if(isLoading){
 if(isAuthenticated)
   return (
     <div className="flex flex-col gap-5 mb-8">
-     <div className="top">
+     <div className="top flex flex-col gap-3">
+      <Title/>
      <Navbar />
       <SearchBox />
       </div>
